@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Ajax Demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+	We are having fun with JQuery...
+</div>
+<button>Get Content from Remote</button>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('button').click(function() {
+			//Load the content from another resource without re-loading the page
+			// $('.container').load("ajText.txt");
+			$('.container').load('ajText.txt',function(response, statusValue, xhr){
+				console.log(xhr);
+			});
+			
+
+		});
+	});
+</script>
+</body>
+</html>

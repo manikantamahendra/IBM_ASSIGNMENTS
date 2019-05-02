@@ -1,0 +1,26 @@
+<!-- To highlight the bold words of a paragraph in HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Highlight Bold Words In Paragraph</title>
+</head>
+<body>
+
+	
+	<button onclick="boldText();">Highlight the bold ? click the button</button>
+
+	<p>Hi <b>This is all about the Javascript</b> <b>Javascript in the customised format</b>
+	this things are highlighted in the specific format</p>
+
+  <script type="text/javascript">
+		var items;
+		function boldText(){
+			items = document.getElementsByTagName('b');
+			for (var i = 0; i < items.length; i++) {
+				items[i].style.color = "yellow";
+			}
+		}
+	</script>
+
+</body>
+</html>

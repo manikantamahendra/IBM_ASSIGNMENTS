@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More JQuery Stuff</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<button class="hButton">Hide</button>
+<button class="sButton">Display</button>
+<button class="mButton">Slide From Left</button>
+<div class="textContainer" style="border: 1px solid #000; background-color: #d34; padding: 50px;">
+	Moving ahead with JQuery
+</div>
+<div class="moreTextContainer" style="border: 1px solid #000; background-color: blue;margin-right: 0px; padding: 10px; position: absolute; right: 0; bottom: 0; width: 100px; height: 80px;">
+	Trying some JQuery fun here...
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".hButton").click(function() {
+			// $(".textContainer").hide();
+			 $(".textContainer").slideUp(4000);
+			// $(".textContainer").fadeIn('slow');
+			//$(".textContainer").slideToggle('slow');
+		});
+
+		$(".sButton").click(function() {
+			// $(".textContainer").show();
+			// $(".textContainer").slideDown();
+			// $(".textContainer").fadeOut(3000);
+			// $(".textContainer").fadeToggle(4000);
+			$(".textContainer").fadeTo(3000, 0.1);
+		});
+
+		$(".mButton").click(function() {
+			// $(".moreTextContainer").animate({left: '100px'}, 'slow');
+			// $(".moreTextContainer").animate({height: '200px', width: '300px'}, 5000);
+			// $(".moreTextContainer").animate({height: 'toggle'}, 5000);
+
+			//Using animate with a queue
+			$(".moreTextContainer").animate({height: '200px'}, 'slow');
+			$(".moreTextContainer").animate({opacity: '0.2'}, 'slow');
+			$(".moreTextContainer").animate({width: '200px'}, 'slow');
+			$(".moreTextContainer").animate({height: '80px'}, 'slow');
+			$(".moreTextContainer").animate({opacity: '1'}, 'slow');
+			$(".moreTextContainer").animate({width: '100px'}, 'slow');
+		});
+
+	});
+</script>
+</body>
+</html>

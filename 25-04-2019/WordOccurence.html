@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Occurence in the string</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function count(main_str, sub_str) 
+    {
+    main_str += '';
+    sub_str += '';
+    if (sub_str.length <= 0) 
+    {
+        return main_str.length + 1;
+    }
+       subStr = sub_str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+       return (main_str.match(new RegExp(subStr, 'gi')) || []).length;
+    }
+ 
+console.log(count("hi this is manikanta,manikanta is from sattenapalli", 'is'));
+console.log(count("hi this is manikanta,manikanta is from sattenapalli", 'from',false));
+	</script>
+
+</body>
+</html>
